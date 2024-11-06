@@ -6,7 +6,7 @@ import { ChevronDown, Phone } from 'lucide-react'
 
 function Navbar() {
   return (
-    <div className="w-full py-5 shadow-md bg-transparent fixed z-20 text-white">
+    <div className="w-full py-5 shadow-md bg-foreground z-20 text-white">
       <div className="md:w-11/12 mx-auto flex justify-between items-center">
 
         <div className="flex">
