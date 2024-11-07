@@ -8,28 +8,14 @@ import StatsSection from "@/components/StatsSection";
 import CityProperties from "@/components/CityProperties";
 import HeroSection from "@/components/HeroSection";
 import FeaturedProperties from "@/components/FeaturedProperties";
+import SignInCTA from "@/components/SignInCTA";
+import WhyWorkWithUs from "@/components/WhyWorkWithUs";
 
 export default function Home() {
 
 
-  const workUsSection = [
-    {
-      title: "Wide Range of Properties",
-      description: "We offer expert legal help for all related property",
-      icon: <HousePlus size={80} />
-    },
-    {
-      title: "Buy or Rent Homes",
-      description: "We sell your home at the best market price and very quickly as well.",
-      icon: <House size={80} />
-    },
-    {
-      title: "Trusted by Thousands",
-      description: "We offer you free consultancy to get a loan for your new home.",
-      icon: <ShieldCheck size={80} />
-    },
-  ]
   
+
 
   return (
     <>
@@ -73,50 +59,14 @@ export default function Home() {
       <CityProperties />
 
 
-      <div className="md:w-11/12 mx-auto py-24">
-        <h1 className="text-4xl my-2 px-4 font-semibold text-center">
-          Why You Should Work With Us
-        </h1>
-        <p className="text-sm text-center px-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-        <div className="md:w-11/12 mx-auto flex justify-evenly flex-wrap py-6">
-          {workUsSection.map((item, index) => (
-            <div key={index} className="w-1/3 p-4">
-              <div className="mx-auto flex justify-center">
-                {item.icon}
-              </div>
-              <h1 className="mt-4 text-xl md:text-2xl font-semibold text-center">{item.title}</h1>
-              <h1 className="mt-2 text-xs md:text-sm text-center text-gray-800">{item.description}</h1>
-            </div>
-          ))}
-
-        </div>
+      <WhyWorkWithUs />
 
 
-      </div>
+      <SignInCTA />
 
 
-      <div className="pb-24">
-        <div className="md:w-11/12 mx-auto py-16 px-6 flex justify-between items-center rounded-xl bg-secondary-foreground">
-          <div className="w-1/2 px-6">
-            <h1 className="text-white text-2xl font-medium mb-2">
-              Sign in to streamline your search
-            </h1>
-            <p className="text-white text-xs">
-              Save properties, create alerts and keep track of the enquiries you send to agents.
-            </p>
-          </div>
-          <div className="w-1/2 flex justify-center items-center">
-            <Button className="bg-accent text-foreground hover:text-accent active:scale-95">
-              Sign in or create an account <ArrowRight />
-            </Button>
-          </div>
-        </div>
-      </div>
 
-
-      
-          <FeaturedProperties />
+      <FeaturedProperties />
 
 
       <HeroSection />
