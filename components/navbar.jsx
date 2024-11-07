@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Button } from './ui/button'
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ChevronDown, Menu, Phone, X } from 'lucide-react'
 
-export default function Navbar() {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
@@ -17,15 +17,16 @@ export default function Navbar() {
     { name: 'Pages', href: '/' },
     { name: 'Contact', href: '/' },
   ]
+
   return (
-    <nav className="w-full py-4 shadow-md bg-foreground z-20 text-white">
+    (<nav className="w-full py-4 shadow-md bg-foreground z-20 text-white">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-xl font-mono">Real State</h1>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4">
           {navItems.map((item) => (
             <Button key={item.name} variant="link" asChild>
               <Link href={item.href} className="flex items-center text-white">
@@ -37,7 +38,7 @@ export default function Navbar() {
         </div>
 
         {/* Contact Info and User Actions */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4">
           <div className="flex items-center">
             <Phone size={20} />
             <span className="ml-1">+92 330 2355684</span>
@@ -48,7 +49,10 @@ export default function Navbar() {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
 
-          <Button variant="outline" className="bg-foreground rounded-full border-2 border-white hover:text-black hover:bg-white transition-colors" asChild>
+          <Button
+            variant="outline"
+            className="rounded-full border-2 border-white hover:text-black hover:bg-white transition-colors"
+            asChild>
             <Link href="/login">Login</Link>
           </Button>
         </div>
@@ -56,8 +60,8 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="lg:hidden">
-              <Menu />
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
@@ -84,7 +88,10 @@ export default function Navbar() {
                   <Phone size={20} />
                   <span className="ml-2">+92 330 2355684</span>
                 </div>
-                <Button variant="outline" className="w-full rounded-full border-2 border-primary hover:text-white hover:bg-primary transition-colors" asChild>
+                <Button
+                  variant="outline"
+                  className="w-full rounded-full border-2 border-primary hover:text-white hover:bg-primary transition-colors"
+                  asChild>
                   <Link href="/login" onClick={() => setIsOpen(false)}>Login</Link>
                 </Button>
               </div>
@@ -92,6 +99,8 @@ export default function Navbar() {
           </SheetContent>
         </Sheet>
       </div>
-    </nav>
-  )
-};
+    </nav>)
+  );
+}
+
+export default Navbar
