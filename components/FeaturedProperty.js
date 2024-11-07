@@ -6,8 +6,8 @@ import FilterBar from "./FilterBar"
 export default function FeaturedProperty() {
     return (
         <section className="relative">
-            <div className="container w-screen">
-                <div className="relative w-screen min-h-[720px] overflow-hidden">
+            <div className="container w-full">
+                <div className="relative w-full min-h-[720px] overflow-hidden">
                     <div
                         className="absolute w-full inset-0 bg-cover bg-center"
                         style={{
