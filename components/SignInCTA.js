@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
 
+
 export default function SignInCTA() {
     return (
         <section className="container md:w-11/12 mx-auto px-4 py-24">

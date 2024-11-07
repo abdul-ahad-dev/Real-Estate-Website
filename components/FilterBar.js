@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/select"
 import { SlidersHorizontal } from "lucide-react"
 
+
 export default function FilterBar() {
   return (
     <div className="w-10/12 rounded-xl mx-auto bg-foreground p-4">

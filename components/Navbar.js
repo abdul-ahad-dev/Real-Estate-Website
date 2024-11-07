@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ChevronDown, Menu, Phone, X } from 'lucide-react'
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -17,6 +18,12 @@ export default function Navbar() {
     { name: 'Pages', href: '/' },
     { name: 'Contact', href: '/' },
   ]
+
+  const userActions = [
+    { name: 'Login', href: '/' },
+    { name: 'Register', href: '/' },
+  ]
+
   return (
     <nav className="w-full py-4 shadow-md bg-foreground z-20 text-white">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -49,7 +56,7 @@ export default function Navbar() {
           </Avatar>
 
           <Button variant="outline" className="bg-foreground rounded-full border-2 border-white hover:text-black hover:bg-white transition-colors" asChild>
-            <Link href="/login">Login</Link>
+            <Link href="/">Login</Link>
           </Button>
         </div>
 
@@ -85,7 +92,7 @@ export default function Navbar() {
                   <span className="ml-2">+92 330 2355684</span>
                 </div>
                 <Button variant="outline" className="w-full rounded-full border-2 border-primary hover:text-white hover:bg-primary transition-colors" asChild>
-                  <Link href="/login" onClick={() => setIsOpen(false)}>Login</Link>
+                  <Link href="/" onClick={() => setIsOpen(false)}>Login</Link>
                 </Button>
               </div>
             </nav>

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { HousePlus, House, ShieldCheck } from "lucide-react"
 
+
 const workUsSection = [
     {
         title: "Wide Range of Properties",
@@ -18,6 +19,7 @@ const workUsSection = [
         icon: ShieldCheck,
     },
 ]
+
 
 export default function WhyWorkWithUs() {
     return (
@@ -48,4 +50,4 @@ export default function WhyWorkWithUs() {
             </div>
         </section>
     )
-}
+};
