@@ -1,6 +1,6 @@
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, HousePlus } from "lucide-react";
+import { ArrowRight, House, HousePlus, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,14 +13,14 @@ export default function Home() {
       icon: <HousePlus size={80} />
     },
     {
-      title: "Wide Range of Properties",
-      description: "We offer expert legal help for all related property",
-      icon: <HousePlus size={80} />
+      title: "Buy or Rent Homes",
+      description: "We sell your home at the best market price and very quickly as well.",
+      icon: <House size={80} />
     },
     {
-      title: "Wide Range of Properties",
-      description: "We offer expert legal help for all related property",
-      icon: <HousePlus size={80} />
+      title: "Trusted by Thousands",
+      description: "We offer you free consultancy to get a loan for your new home.",
+      icon: <ShieldCheck size={80} />
     },
 
   ]
@@ -65,8 +65,8 @@ export default function Home() {
 
 
       <div className="md:w-11/12 mx-auto py-28">
-        <h1 className="text-4xl my-2 font-semibold text-center">Find Properties in These Cities</h1>
-        <p className="text-sm text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 className="text-4xl my-2 px-4 font-semibold text-center">Find Properties in These Cities</h1>
+        <p className="text-sm text-center px-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
         <div className="flex justify-evenly flex-wrap gap-6 py-10">
           {findProperty.map((item, index) => (
@@ -89,26 +89,45 @@ export default function Home() {
       </div>
 
 
-      <div className="md:w-11/12 mx-auto py-28">
-        <h1 className="text-4xl my-2 font-semibold text-center">
+      <div className="md:w-11/12 mx-auto pb-24">
+        <h1 className="text-4xl my-2 px-4 font-semibold text-center">
           Why You Should Work With Us
         </h1>
-        <p className="text-sm text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-sm text-center px-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        <div className="md:w-11/12 mx-auto flex justify-evenly flex-wrap py-10">
+        <div className="md:w-11/12 mx-auto flex justify-evenly flex-wrap py-6">
           {workUsSection.map((item, index) => (
-            <div key={index} className="w-1/3 p-6">
+            <div key={index} className="w-1/3 p-4">
               <div className="mx-auto flex justify-center">
                 {item.icon}
               </div>
-              <h1 className="mt-4 text-2xl font-semibold text-center">{item.title}</h1>
-              <h1 className="mt-2 text-sm text-center">{item.description}</h1>
+              <h1 className="mt-4 text-xl md:text-2xl font-semibold text-center">{item.title}</h1>
+              <h1 className="mt-2 text-xs md:text-sm text-center text-gray-800">{item.description}</h1>
             </div>
           ))}
 
         </div>
 
 
+      </div>
+
+
+      <div className="pb-24">
+        <div className="md:w-11/12 mx-auto py-16 px-6 flex justify-between items-center rounded-xl bg-secondary-foreground">
+          <div className="w-1/2 px-6">
+            <h1 className="text-white text-xl font-medium mb-2">
+              Sign in to streamline your search
+            </h1>
+            <p className="text-white text-sm">
+              Save properties, create alerts and keep track of the enquiries you send to agents.
+            </p>
+          </div>
+          <div className="w-1/2 flex justify-center items-center">
+            <Button className="bg-accent text-foreground hover:text-accent">
+              Sign in or create an account <ArrowRight />
+            </Button>
+          </div>
+        </div>
       </div>
 
     </>
