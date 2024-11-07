@@ -1,5 +1,6 @@
 import FilterBar from "@/components/FilterBar";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowRight, House, HousePlus, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
@@ -115,10 +116,10 @@ export default function Home() {
       <div className="pb-24">
         <div className="md:w-11/12 mx-auto py-16 px-6 flex justify-between items-center rounded-xl bg-secondary-foreground">
           <div className="w-1/2 px-6">
-            <h1 className="text-white text-xl font-medium mb-2">
+            <h1 className="text-white text-2xl font-medium mb-2">
               Sign in to streamline your search
             </h1>
-            <p className="text-white text-sm">
+            <p className="text-white text-xs">
               Save properties, create alerts and keep track of the enquiries you send to agents.
             </p>
           </div>
@@ -130,6 +131,43 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="md:w-11/12 mx-auto py-28">
+        <h1 className="text-4xl my-2 px-4 font-semibold text-center">
+          Featured Properties
+        </h1>
+        <p className="text-sm text-center px-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <div className="py-6">
+          <Tabs defaultValue="account" className="w-[400px] mx-auto flex justify-center">
+            <TabsList className="flex gap-4">
+              <TabsTrigger value="all_properties">All Properties</TabsTrigger>
+              <TabsTrigger value="villa">Villa</TabsTrigger>
+              <TabsTrigger value="apartment">Apartment</TabsTrigger>
+              <TabsTrigger value="office">Office</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+
+
+        <div className="flex justify-evenly flex-wrap gap-6 py-10">
+          {findProperty.map((item, index) => (
+            <figure key={index} className="relative max-w-sm transition-all duration-300 cursor-pointer">
+              <div className="w-[200px] h-[300px]">
+                <Image
+                  src="https://images.unsplash.com/photo-1730812393789-a7d15960029d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Image description"
+                  fill={true}
+                  className="rounded-xl brightness-75"
+                />
+              </div>
+              <figcaption className="absolute px-6 text-xl text-white top-6">
+                <p className="font-semibold">Karachi</p>
+                <p className="text-sm">2 Properties</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
