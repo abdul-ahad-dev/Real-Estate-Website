@@ -18,7 +18,6 @@ export default function FeaturedProperty() {
 
                     <div className="absolute inset-0 bg-black/40" />
 
-
                     <div className="relative min-h-[720px] z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
                         <div className="flex flex-wrap justify-center gap-4 mb-4">
                             <span className="flex items-center"><Bed className="mr-2 h-4 w-4" /> 5 Beds</span>
@@ -39,7 +38,6 @@ export default function FeaturedProperty() {
                         </Button>
                     </div>
                 </div>
-
 
                 <div className="absolute left-4 right-4 -bottom-12 z-20">
                     <FilterBar />

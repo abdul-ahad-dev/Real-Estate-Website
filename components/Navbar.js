@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from './ui/button'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -9,7 +9,8 @@ import { ChevronDown, Menu, Phone, X } from 'lucide-react'
 
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [userActions, setUserActions] = useState({ name: 'Login', href: '/login' });
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -19,10 +20,17 @@ export default function Navbar() {
     { name: 'Contact', href: '/' },
   ]
 
-  const userActions = [
-    { name: 'Login', href: '/' },
-    { name: 'Register', href: '/' },
-  ]
+  useEffect(() => {
+    const checkUser = async () => {
+      const user = await localStorage.getItem('user');
+      if (user) {
+        setUserActions({ name: 'Login', href: '/' })
+      } else {
+        setUserActions({ name: 'Logout', href: '/' })
+      }
+    }
+    checkUser();
+  }, []);
 
   return (
     <nav className="w-full py-4 shadow-md bg-foreground z-20 text-white">
@@ -56,7 +64,7 @@ export default function Navbar() {
           </Avatar>
 
           <Button variant="outline" className="bg-foreground rounded-full border-2 border-white hover:text-black hover:bg-white transition-colors" asChild>
-            <Link href="/">Login</Link>
+            <Link href={`${userActions.href}`}>{userActions.name}</Link>
           </Button>
         </div>
 
@@ -92,7 +100,7 @@ export default function Navbar() {
                   <span className="ml-2">+92 330 2355684</span>
                 </div>
                 <Button variant="outline" className="w-full rounded-full border-2 border-primary hover:text-white hover:bg-primary transition-colors" asChild>
-                  <Link href="/" onClick={() => setIsOpen(false)}>Login</Link>
+                  <Link href={`${userActions.href}`} onClick={() => setIsOpen(false)}>{userActions.name}</Link>
                 </Button>
               </div>
             </nav>

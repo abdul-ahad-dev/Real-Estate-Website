@@ -7,6 +7,7 @@ import WhyWorkWithUs from "@/components/WhyWorkWithUs";
 import FeaturedProperty from "@/components/FeaturedProperty";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import RecentArticles from "@/components/RecentArticles";
+import DownloadApp from "@/components/DownloadApp";
 
 export default function Home() {
   return (
@@ -36,6 +37,9 @@ export default function Home() {
 
 
       <RecentArticles />
+
+
+      <DownloadApp />
 
     </>
   );
