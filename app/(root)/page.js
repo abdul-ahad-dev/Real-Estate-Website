@@ -8,6 +8,7 @@ import FeaturedProperty from "@/components/FeaturedProperty";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import RecentArticles from "@/components/RecentArticles";
 import DownloadApp from "@/components/DownloadApp";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
 
 export default function Home() {
   return (
@@ -41,6 +42,8 @@ export default function Home() {
 
       <DownloadApp />
 
+
+      <NewsletterSubscription />
     </>
   );
 }
