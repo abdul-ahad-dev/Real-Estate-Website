@@ -10,40 +10,41 @@ import RecentArticles from "@/components/RecentArticles";
 import DownloadApp from "@/components/DownloadApp";
 import NewsletterSubscription from "@/components/NewsletterSubscription";
 
+
 export default function Home() {
-  return (
-    <>
-      <FeaturedProperty />
+	return (
+		<>
+			<FeaturedProperty />
 
 
-      <CityProperties />
+			<CityProperties />
 
 
-      <WhyWorkWithUs />
+			<WhyWorkWithUs />
 
 
-      <SignInCTA />
+			<SignInCTA />
 
 
-      <FeaturedProperties />
+			<FeaturedProperties />
 
 
-      <HeroSection />
+			<HeroSection />
 
 
-      <StatsSection />
+			<StatsSection />
 
 
-      <TestimonialsSection />
+			<TestimonialsSection />
 
 
-      <RecentArticles />
+			<RecentArticles />
 
 
-      <DownloadApp />
+			<DownloadApp />
 
 
-      <NewsletterSubscription />
-    </>
-  );
+			<NewsletterSubscription />
+		</>
+	);
 }
