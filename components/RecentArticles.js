@@ -2,6 +2,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 
 const articles = [
@@ -18,7 +19,7 @@ const articles = [
         title: "Read Unveils the Best Canadian Cities for Biking",
         category: "Apartment",
         date: "March 19, 2024",
-        image: "https://plus.unsplash.com/premium_photo-1676321046262-4978a752fb15?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1540266947548-74a00563e834?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         slug: "best-canadian-cities-biking",
     },
     {
@@ -56,7 +57,8 @@ export default function RecentArticles() {
                         <CardHeader className="p-0">
                             <Link href={`/blog/${article.slug}`}>
                                 <div className="aspect-[4/3] overflow-hidden">
-                                    <img
+                                    <Image
+                                    fill={true}
                                         src={article.image}
                                         alt={article.title}
                                         className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { MoveRight } from "lucide-react"
+import Image from "next/image"
 
 
 export default function StatsSection() {
@@ -53,8 +54,9 @@ export default function StatsSection() {
 
 
                 <div className="relative h-[500px] rounded-2xl overflow-hidden">
-                    <img
-                        src="https://plus.unsplash.com/premium_photo-1682960971720-1beb427d524e?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <Image
+                        fill={true}
+                        src="https://images.unsplash.com/photo-1521674685714-2446ff917fbc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Modern white house with glass windows and beautiful landscaping"
                         className="h-full w-full object-cover"
                     />

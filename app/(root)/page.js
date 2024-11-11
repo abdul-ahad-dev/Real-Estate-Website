@@ -14,6 +14,7 @@ import NewsletterSubscription from "@/components/NewsletterSubscription";
 export default function Home() {
 	return (
 		<>
+
 			<FeaturedProperty />
 
 
@@ -38,13 +39,14 @@ export default function Home() {
 			<TestimonialsSection />
 
 
-			<RecentArticles />
+			{/* <RecentArticles /> */}
 
 
 			<DownloadApp />
 
 
 			<NewsletterSubscription />
+
 		</>
 	);
 }

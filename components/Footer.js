@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="flex items-center justify-between h-full">
                     {/* Copyright */}
                     <p className="text-sm text-muted-foreground">
-                        Copyright © {new Date().getFullYear()}. RealState
+                        Copyright © {new Date().getFullYear()}. Abdul Ahad
                     </p>
 
                     {/* Logo */}

@@ -18,7 +18,7 @@ export default function DownloadApp() {
                         </h2>
 
                         <p className="text-white/80 text-lg max-w-md">
-                            Take classes on the go with the just home app. Stream or download to watch on the plane, the subway, or wherever you learn best.
+                            Take classes on the go with the just home app. Stream or download to watch on the plane{','} the subway{','} or wherever you learn best.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">

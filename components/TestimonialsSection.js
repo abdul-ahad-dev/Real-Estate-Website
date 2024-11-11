@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import Image from "next/image"
 
 
 export default function TestimonialsSection() {
@@ -72,7 +73,8 @@ export default function TestimonialsSection() {
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
                         {['Amazon', 'AMD', 'Cisco', 'Dropcom', 'Logitech', 'Spotify'].map((company) => (
                             <div key={company} className="flex justify-center">
-                                <img
+                                <Image
+                                    fill={true}
                                     src="/placeholder.svg?height=40&width=120"
                                     alt={`${company} logo`}
                                     className="h-8 object-contain opacity-50 hover:opacity-100 transition-opacity"

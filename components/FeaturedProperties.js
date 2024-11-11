@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Badge } from "@/components/ui/badge"
 import { Bath, BedDouble, MapPin, MoveRight, Square } from "lucide-react"
+import Image from "next/image"
 
 
 const properties = [
@@ -94,29 +96,32 @@ export default function FeaturedProperties() {
                 </TabsList>
             </Tabs>
 
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {properties.map((property) => (
                     <Card key={property.id} className="overflow-hidden">
-                        <CardHeader className="p-0 relative">
-                            <img
-                                alt={property.title}
-                                className="w-full h-[240px] object-cover brightness-50"
-                                src={property.image}
-                            />
-                            <div className="absolute top-4 left-4 flex gap-2">
-                                <span
-                                    className={`px-3 py-1 rounded-full text-xs font-semibold cursor-pointer ${property.isRent
-                                        ? "bg-green-600 hover:bg-green-700 text-white"
-                                        : "bg-primary text-primary-foreground"
-                                        }`}
-                                >
-                                    {property.isRent ? "FOR RENT" : "FOR SALE"}
-                                </span>
-                                {property.isFeatured && (
-                                    <span className="px-3 py-1 rounded-full text-xs font-semibold cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white">
-                                        FEATURED
-                                    </span>
-                                )}
+                        <CardHeader className="p-0">
+                            <div className="relative h-60">
+                                <Image
+                                    alt={property.title}
+                                    src={property.image}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="brightness-90"
+                                />
+                                <div className="absolute top-4 left-4 flex gap-2">
+                                    <Badge
+                                        variant={property.isRent ? "secondary" : "default"}
+                                        className="cursor-pointer"
+                                    >
+                                        {property.isRent ? "FOR RENT" : "FOR SALE"}
+                                    </Badge>
+                                    {property.isFeatured && (
+                                        <Badge variant="outline" className="bg-yellow-500 text-white border-yellow-500 hover:bg-yellow-600">
+                                            FEATURED
+                                        </Badge>
+                                    )}
+                                </div>
                             </div>
                         </CardHeader>
                         <CardContent className="p-4">
@@ -154,6 +159,7 @@ export default function FeaturedProperties() {
                     </Card>
                 ))}
             </div>
+            
 
             <div className="flex justify-center mt-10">
                 <Button variant="outline" className="gap-2 bg-accent hover:text-accent hover:bg-foreground transition-colors active:scale-95">
