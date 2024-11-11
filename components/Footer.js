@@ -1,12 +1,13 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Github, Twitter, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
+
 
 export default function Footer() {
     const socialLinks = [
-        { icon: Facebook, href: "#", label: "Facebook" },
-        { icon: Twitter, href: "#", label: "Twitter" },
-        { icon: Instagram, href: "#", label: "Instagram" },
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
+        { icon: Github, href: "https://github.com/abdul-ahad-dev", label: "Github" },
+        { icon: Twitter, href: "", label: "Twitter" },
+        { icon: Instagram, href: "https://www.instagram.com/abdul_ahad.dev/", label: "Instagram" },
+        { icon: Linkedin, href: "https://www.linkedin.com/in/abdulahaddeveloper/", label: "LinkedIn" },
     ]
 
     return (
@@ -43,6 +44,7 @@ export default function Footer() {
                             <Link
                                 key={social.label}
                                 href={social.href}
+                                target="_blank"
                                 className="text-muted-foreground hover:text-foreground transition-colors"
                                 aria-label={social.label}
                             >

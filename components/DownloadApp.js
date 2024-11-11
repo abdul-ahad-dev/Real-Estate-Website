@@ -8,7 +8,7 @@ export default function DownloadApp() {
             <div className="container md:w-11/12 mx-auto rounded-xl bg-[#1B4D3E] overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Left Content */}
-                    <div className="px-6 py-16 lg:py-24 space-y-6">
+                    <div className="px-10 md:px-16 py-16 lg:py-24 space-y-6">
                         <div className="inline-block px-4 py-2 rounded-full bg-white/10 text-white text-sm">
                             Start today
                         </div>
@@ -17,7 +17,7 @@ export default function DownloadApp() {
                             Download the App
                         </h2>
 
-                        <p className="text-white/80 text-lg max-w-md">
+                        <p className="text-white text-lg max-w-md">
                             Take classes on the go with the just home app. Stream or download to watch on the plane{','} the subway{','} or wherever you learn best.
                         </p>
 

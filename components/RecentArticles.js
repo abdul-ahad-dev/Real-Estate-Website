@@ -51,12 +51,12 @@ export default function RecentArticles() {
                 </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className=" grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {articles.map((article) => (
                     <Card key={article.id} className="group overflow-hidden">
                         <CardHeader className="p-0">
                             <Link href={`/blog/${article.slug}`}>
-                                <div className="aspect-[4/3] overflow-hidden">
+                                <div className="relative  aspect-[4/3] overflow-hidden">
                                     <Image
                                     fill={true}
                                         src={article.image}
