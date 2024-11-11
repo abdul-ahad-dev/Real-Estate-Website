@@ -55,7 +55,7 @@ export default function RecentArticles() {
                 {articles.map((article) => (
                     <Card key={article.id} className="group overflow-hidden">
                         <CardHeader className="p-0">
-                            <Link href={`/blog/${article.slug}`}>
+                            <Link href={`/`}>
                                 <div className="relative  aspect-[4/3] overflow-hidden">
                                     <Image
                                     fill={true}
@@ -76,7 +76,7 @@ export default function RecentArticles() {
                                 </span>
                             </div>
                             <Link
-                                href={`/blog/${article.slug}`}
+                                href={`/`}
                                 className="group/title"
                             >
                                 <h3 className="font-semibold text-lg mb-4 line-clamp-2 group-hover/title:text-primary transition-colors">
@@ -86,7 +86,7 @@ export default function RecentArticles() {
                         </CardContent>
                         <CardFooter className="px-6 pb-6">
                             <Link
-                                href={`/blog/${article.slug}`}
+                                href={`/`}
                                 className="text-sm font-medium flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
                             >
                                 Read More

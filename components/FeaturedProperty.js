@@ -32,7 +32,7 @@ export default function FeaturedProperty() {
                         </h2>
                         <Button
                             size="lg"
-                            className="bg-accent text-accent-foreground hover:bg-accent/90"
+                            className="bg-accent text-accent-foreground hover:bg-accent/90 active:scale-95"
                         >
                             View Details <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>

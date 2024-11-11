@@ -59,11 +59,11 @@ export default function TestimonialsSection() {
                                 Searches for multiplexes, property comparisons, and the loan estimator. Works great. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dores.
                             </p>
                             <div className="flex gap-2">
-                                <Button size="icon" variant="outline" className="rounded-full">
+                                <Button size="icon" variant="outline" className="rounded-full active:scale-95">
                                     <ChevronLeft className="h-4 w-4" />
                                     <span className="sr-only">Previous testimonial</span>
                                 </Button>
-                                <Button size="icon" variant="outline" className="rounded-full">
+                                <Button size="icon" variant="outline" className="rounded-full active:scale-95">
                                     <ChevronRight className="h-4 w-4" />
                                     <span className="sr-only">Next testimonial</span>
                                 </Button>

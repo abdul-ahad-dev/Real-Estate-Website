@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function DownloadApp() {
     return (
-        <section className="">
+        <section className="px-4 md:px-0">
             <div className="container md:w-11/12 mx-auto rounded-xl bg-[#1B4D3E] overflow-hidden">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Left Content */}
@@ -28,7 +28,7 @@ export default function DownloadApp() {
                                 size="lg"
                                 asChild
                             >
-                                <a href="#" className="flex items-center">
+                                <a href="/" className="flex items-center">
                                     <Apple className="h-5 w-5" />
                                     <div className="flex flex-col items-start text-left">
                                         <span className="text-xs">Download on the</span>

@@ -64,7 +64,7 @@ export default function FilterBar() {
 						<SlidersHorizontal className="h-4 w-4" />
 						<span className="sr-only">Filter</span>
 					</Button>
-					<Button className="h-10 w-full bg-yellow-500 text-yellow-950 hover:bg-yellow-500 sm:w-24">
+					<Button className="h-10 w-full bg-yellow-500 text-yellow-950 hover:bg-yellow-500 active:scale-95 sm:w-24">
 						Search
 					</Button>
 				</div>

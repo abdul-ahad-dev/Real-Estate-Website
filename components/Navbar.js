@@ -34,7 +34,7 @@ export default function Navbar() {
 
 	return (
 		<nav className="w-full py-4 shadow-md bg-foreground z-20 text-white">
-			<div className="container mx-auto px-4 flex justify-between items-center">
+			<div className="container md:w-11/12 mx-auto px-4 flex justify-between items-center">
 				<div className="flex items-center">
 					<h1 className="text-xl font-mono">Real State</h1>
 				</div>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
 					<Avatar>
 						<AvatarImage src="https://github.com/shadcn.png" alt="User avatar" />
-						<AvatarFallback>CN</AvatarFallback>
+						<AvatarFallback>AA</AvatarFallback>
 					</Avatar>
 
 					<Button variant="outline" className="bg-foreground rounded-full border-2 border-white hover:text-black hover:bg-white transition-colors" asChild>
